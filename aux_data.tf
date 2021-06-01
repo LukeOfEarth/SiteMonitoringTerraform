@@ -97,7 +97,7 @@ resource "aws_dynamodb_table_item" "seed_list5" {
             "S":"The Hive"
         },
         "URL":{
-            "S":"www.the-hive.bbd.co.za"
+            "S":"the-hive.bbd.co.za"
         }
     }
     ITEM
