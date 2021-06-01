@@ -16,6 +16,11 @@ resource "aws_dynamodb_table" "aux_table" {
     type = "S"
   }
 
+  replica {
+    region_name = var.region_2
+    kms_key_arn = aws_kms_key.replica_key.arn
+  }
+
   point_in_time_recovery {
     enabled = true
   }

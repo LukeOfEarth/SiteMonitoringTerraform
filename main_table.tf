@@ -14,10 +14,10 @@ resource "aws_dynamodb_table" "my_table" {
     type = "S"
   }
 
-  # replica {
-  #   region_name = var.region_2
-  #   # kms_key_arn = aws_kms_key.key.arn
-  # }
+  replica {
+    region_name = var.region_2
+    kms_key_arn = aws_kms_key.replica_key.arn
+  }
 
   ttl {
     attribute_name = "TimeToExist"
